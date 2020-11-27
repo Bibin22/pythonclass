@@ -1,0 +1,9 @@
+initialise
+git init
+untracked files
+git status
+adding untracked files staging area
+git add -A
+git add filename
+adding untracked files to localrepository
+git commit -m"message"
