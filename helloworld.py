@@ -1,16 +1,8 @@
-arr =[1, 2, 3, 4, 5]
-n = 4
-l = 0
-u = len(arr)-1
-while l <= u:
-    mid = (l + u) // 2
-    if arr[mid] == n:
-        p = mid
-        print(n, "found at position", p)
-        break
-    elif arr[mid] < n :
-        l = mid + 1
-    elif arr[mid] > n :
-        u = mid - 1
-else:
-    print("item not found")
+import mysql.connector
+mydb = mysql.connector.connect(host='localhost', user='bibin', passwd='1234', database='tutorial')
+mycursor = mydb.cursor()
+mycursor.execute("insert into student values('vishnu','icet')")
+mycursor.execute("select * from student")
+result = mycursor.fetchall()
+for i in result:
+    print(i)
